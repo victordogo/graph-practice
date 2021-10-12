@@ -3,7 +3,7 @@ library(lubridate)
 
 # Lendo banco e limpando
 
-spbr <- readr::read_csv2("2021-10/brasileirao-saopaulo/data/brasileirao.csv") |>
+spbr <- readr::read_csv2("2021-10/2021-10-12-brasileirao-saopaulo/data/brasileirao.csv") |>
   filter(Mandante=="São Paulo" | Visitante=="São Paulo") |>
   mutate(Temporada = year(Data), .keep="unused", .before=`Horário`) |>
   select(Temporada, Mandante, Visitante, `Mandante Placar`, `Visitante Placar`) |>
